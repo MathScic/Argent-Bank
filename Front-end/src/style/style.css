@@ -13,22 +13,6 @@ html {
     min-height: 100vh;
   }
 
-  .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 20px;
-}
-
-.navigation li {
-    list-style-type: none;
-    color: #2c3e50 ;
-}
-
-.navigation img {
-    max-width: 100%;
-    width: 200px;
-}
 
   @media (min-width: 720px) {
     .account {

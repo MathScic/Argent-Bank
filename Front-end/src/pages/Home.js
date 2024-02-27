@@ -1,13 +1,15 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import HomeContent from "../components/HomeContent";
+import Footer from "../components/footer/Footer";
+import HomeContent from "../components/homeContent/HomeContent";
+import Banner from "../components/banner/Banner";
+import "../style/style.css";
+import Navigation from "../components/navigation/Navigation";
 
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Navigation />
+      <Banner />
       <HomeContent />
       <Footer />
     </div>

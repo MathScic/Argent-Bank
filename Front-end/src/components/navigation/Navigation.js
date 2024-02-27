@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../style/style.css";
+import "../navigation/Navigation.css";
 
 const Navigation = () => {
   return (
@@ -14,7 +14,7 @@ const Navigation = () => {
       <div className="sign-in-container">
         <NavLink to="sign-in">
           <li className="">
-            <i className="fa fa-user-circle">Sign In</i>
+            <i className="fa fa-user-circle signin-container">Sign In</i>
           </li>
         </NavLink>
       </div>

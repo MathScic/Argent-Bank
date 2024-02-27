@@ -1,0 +1,22 @@
+.signin-container {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.navigation li {
+    list-style-type: none;
+    color: #2c3e50 ;
+}
+
+.navigation img {
+    max-width: 100%;
+    width: 200px;
+}

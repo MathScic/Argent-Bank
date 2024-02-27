@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../style/SignIn.css";
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import userData from "../user.json";
 
 const SignIn = () => {
