@@ -6,26 +6,22 @@ const User = () => {
   return (
     <div>
       <nav className="main-nav">
-        <NavLink to="/">
-          <a className="main-nav-logo" href="./index.js">
-            <img
-              className="main-nav-logo-image"
-              src="./img/argentBankLogo.png"
-              alt="Argent Bank Logo"
-            />
-            <h1 className="sr-only">Argent Bank</h1>
-          </a>
+        <NavLink to="/" className="main-nav-logo" href="./index.js">
+          <img
+            className="main-nav-logo-image"
+            src="./img/argentBankLogo.png"
+            alt="Argent Bank Logo"
+          />
+          <h1 className="sr-only">Argent Bank</h1>
         </NavLink>
         <div>
           <a className="main-nav-item" href="./user.html">
             <i className="fa fa-user-circle"></i>
             Tony
           </a>
-          <NavLink to="/">
-            <a className="main-nav-item" href="./index.html">
-              <i clasNameclassNames="fa fa-sign-out"></i>
-              Sign Out
-            </a>
+          <NavLink to="/" className="main-nav-item" href="./index.html">
+            <i className="fa fa-sign-out"></i>
+            Sign Out
           </NavLink>
         </div>
       </nav>

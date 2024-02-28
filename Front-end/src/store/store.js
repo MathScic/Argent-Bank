@@ -1,15 +1,15 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { userReducer } from "./reducers/reducers";
-import * as actions from "./actions";
+import { createStore } from "redux";
+import rootReducer from "../store/reducers/reducers";
 
-//Combiné les reducers
-const rootReducer = combineReducers({
-  user: userReducer,
-});
-//Ajout des reducers
+const initialState = {
+  user: null,
+  api: {
+    loading: false,
+    data: null,
+    error: null,
+  },
+};
 
-// Créer le store en utilisant le rootReducer et le middleware thunk
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, initialState);
 
-export { store, actions };
+export default store;

@@ -1,3 +1,4 @@
+// SignIn.js
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../style/SignIn.css";
@@ -40,7 +41,7 @@ const SignIn = () => {
           <h1>Sign In</h1>
           <form onSubmit={handleSignIn}>
             <div className="input-wrapper">
-              <label for="username">Username</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 id="username"
@@ -49,7 +50,7 @@ const SignIn = () => {
               />
             </div>
             <div className="input-wrapper">
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
