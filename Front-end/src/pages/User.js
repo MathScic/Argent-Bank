@@ -1,8 +1,16 @@
 import React from "react";
 import Footer from "../components/footer/Footer";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const User = () => {
+  const userState = useSelector((state) => state.user);
+  const { name, email } = userState.user;
+
+  if (!name) {
+    return <div>Loading ...</div>;
+  }
+
   return (
     <div>
       <nav className="main-nav">
@@ -17,7 +25,7 @@ const User = () => {
         <div>
           <a className="main-nav-item" href="./user.html">
             <i className="fa fa-user-circle"></i>
-            Tony
+            {name}
           </a>
           <NavLink to="/" className="main-nav-item" href="./index.html">
             <i className="fa fa-sign-out"></i>
@@ -30,7 +38,7 @@ const User = () => {
           <h1>
             Welcome back
             <br />
-            Tony Jarvis!
+            {name}
           </h1>
           <button className="edit-button">Edit Name</button>
         </div>

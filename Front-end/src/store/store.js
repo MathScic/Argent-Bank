@@ -1,15 +1,10 @@
-import { createStore } from "redux";
-import rootReducer from "../store/reducers/reducers";
+import { createStore, combineReducers } from "redux";
+import userReducer from "./reducers/reducers";
 
-const initialState = {
-  user: null,
-  api: {
-    loading: false,
-    data: null,
-    error: null,
-  },
-};
+const rootReducer = combineReducers({
+  user: userReducer,
+});
 
-const store = createStore(rootReducer, initialState);
+const store = createStore(rootReducer);
 
 export default store;

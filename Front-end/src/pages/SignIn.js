@@ -4,8 +4,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../style/SignIn.css";
 import Footer from "../components/footer/Footer";
 import userData from "../user.json";
+import { useDispatch } from "react-redux";
+import { setUser } from "../store/actions/actions";
 
 const SignIn = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -15,14 +18,24 @@ const SignIn = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
 
+    console.log("Username", username);
+    console.log("Password", password);
+
     const matchedUser = users.find(
-      (user) => user.username === username && user.password === password
+      (user) =>
+        (user.username === username || user.email === username) &&
+        user.password === password
     );
 
+    console.log("MatchUser:", matchedUser);
+
     if (matchedUser) {
+      dispatch(
+        setUser({ name: matchedUser.username, email: matchedUser.email })
+      );
       navigate("/user");
     } else {
-      alert("Identifiant incorrect veillez a re éssayer !!");
+      alert("Identifiant incorrect, veuillez réessayer !!");
     }
   };
 
